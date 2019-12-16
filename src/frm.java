@@ -88,7 +88,7 @@ public class frm extends javax.swing.JFrame {
                 .addGap(250, 250, 250))
             .addGroup(layout.createSequentialGroup()
                 .addGap(73, 73, 73)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txtfiboIn, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(100, 100, 100)
@@ -101,7 +101,7 @@ public class frm extends javax.swing.JFrame {
                         .addGap(100, 100, 100)
                         .addComponent(btnprime)
                         .addGap(115, 115, 115)
-                        .addComponent(lblprimeOut))
+                        .addComponent(lblprimeOut, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addComponent(lblprime)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txtfactIn, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -158,7 +158,16 @@ public class frm extends javax.swing.JFrame {
     }//GEN-LAST:event_btnfactActionPerformed
 
     private void btnprimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnprimeActionPerformed
-        // TODO add your handling code here:
+        int n = Integer.parseInt(txtprimeIn.getText());
+        
+         for(int i = 2; i < n; i++) {
+            if(n % i == 0) {
+                lblprimeOut.setText("Not Prime");
+                return;
+            }
+        }
+        lblprimeOut.setText("It's Prime");
+        
     }//GEN-LAST:event_btnprimeActionPerformed
 
     private void btnfiboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfiboActionPerformed
