@@ -171,7 +171,19 @@ public class frm extends javax.swing.JFrame {
     }//GEN-LAST:event_btnprimeActionPerformed
 
     private void btnfiboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfiboActionPerformed
-        // TODO add your handling code here:
+        int num = Integer.parseInt(txtfiboIn.getText());
+        int ans = 1;
+        
+        for (int i = 1; i<= num; i ++)
+        {
+            ans = (i - 1) + ()
+            
+        }
+        
+        
+        
+        
+        
     }//GEN-LAST:event_btnfiboActionPerformed
 
     /**
