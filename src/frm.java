@@ -171,36 +171,14 @@ public class frm extends javax.swing.JFrame {
     }//GEN-LAST:event_btnprimeActionPerformed
 
     private void btnfiboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfiboActionPerformed
-        int number = Integer.parseInt(txtfiboIn.getText());
+        int num = Integer.parseInt(txtfiboIn.getText());
         int ans = 1;
         
         
-        function fibonacci(number) 
+        // no idea
         
-        {
-        var sequence = [1, 1];
-
-	for (var i = 2; i < number; i++) {
-            sequence[i] = sequence[i - 1] + sequence[i - 2];
-        }
-
-        return sequence[number - 1];
-    }
     
-        function fibonacci(number) {
-
-	if (number < 1) {
-                return 0;
-            }
-
-            if (number <= 2) {
-                return 1;
-            }
-
-            return fibonacci(number - 1) + fibonacci(number - 2);
-        }
-    
-        lblfiboOut.setText(""+ fibonacci +"")
+        
         
         
         
@@ -242,6 +220,15 @@ public class frm extends javax.swing.JFrame {
         });
     }
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnfact;
     private javax.swing.JButton btnfibo;
