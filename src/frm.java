@@ -172,16 +172,17 @@ public class frm extends javax.swing.JFrame {
 
     private void btnfiboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfiboActionPerformed
         int num = Integer.parseInt(txtfiboIn.getText());
-        int ans = 1;
         
+        int previous_first = 0, previous_second = 1, next = 1;
         
-        // no idea
-        
-    
-        
-        
-        
-        
+        for (int i = 2; i <= num; i++)
+        {
+            next = previous_first + previous_second;
+            previous_first = previous_second;
+            previous_second = next;
+            return;
+        }
+        lblfiboOut.setText(""+ next +"");
         
     }//GEN-LAST:event_btnfiboActionPerformed
 
