@@ -115,7 +115,7 @@ public class frm extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(42, 42, 42)
                 .addComponent(lbltitle)
                 .addGap(18, 18, 18)
                 .addComponent(lblfact)
@@ -138,7 +138,7 @@ public class frm extends javax.swing.JFrame {
                     .addComponent(txtfiboIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnfibo)
                     .addComponent(lblfiboOut))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
         pack();
@@ -173,14 +173,13 @@ public class frm extends javax.swing.JFrame {
     private void btnfiboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfiboActionPerformed
         int num = Integer.parseInt(txtfiboIn.getText());
         
-        int previous_first = 0, previous_second = 1, next = 1;
+        int first = 0, second = 1, next = 0;
         
         for (int i = 2; i <= num; i++)
         {
-            next = previous_first + previous_second;
-            previous_first = previous_second;
-            previous_second = next;
-            return;
+            next = first + second;
+            first = second;
+            second = next;
         }
         lblfiboOut.setText(""+ next +"");
         
